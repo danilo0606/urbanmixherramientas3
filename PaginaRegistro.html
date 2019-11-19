@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+		<link href="css/plantilla1.css" rel="stylesheet" type="text/css" >
+<title>urban mix	</title>
+<script>
+function validarFormulario(){
+var txtNombre = document.getElementById('nombre').value;
+var txtcontraseña = document.getElementById('contraseña').value;
+var txtcorreo = document.getElementById('correo').value;
+var cmbSelector = document.getElementById('selector').selectedIndex;
+var chkvalidacionpersona = document.getElementById('checkBox');
+//Test campo obligatorio
+if(txtNombre == null || txtNombre.length == 0 ){
+alert('ERROR: debes ingresar un nombre');
+return false;
+}
+//Test comboBox
+if(cmbSelector == null || cmbSelector == 0){
+alert('ERROR: Debe seleccionar una opción de animales');
+return false;
+}
+//Test checkBox
+if(!chkvalidacionpersona.checked){
+alert('ERROR: Debe seleccionar la opcion no soy un robot');
+return false;
+}
+alert('DATOS CORRECTOS, ENVIANDO INFORMACIÓN AL SERVIDOR');
+return true;
+}
+</script>
+</head>
+<body>
+
+<div id="contenedor">
+
+	<table id= "menu" border = "solid" align="center"  bgcolor= green >	
+				<tr>
+					<td><a href = "PaginaPrincipal.html"><font size="6" face ="verdana" >INICIO</font></a></td>
+					<td><a href = "paginaartistas.html"><font size="6" face ="verdana" >ARTISTAS</font></a></td>
+					<td><a href = "PaginaRegistro.html"><font size="6" face ="verdana" >REGISTRATE</font></a></td>
+				</tr>
+				</table>
+				<br>
+				<br>
+				<br>
+	  <div id="encabezado" >
+	  <center><img src="img/logotipo_web.png" style ="width:850px;height:150px;" > </center>
+			
+	  </div>
+ 
+	  <div id="centro">
+			 <div id="contenido">
+		
+					<h1>REGISTRATE </h1>
+													<font size="6" face ="verdana" align= "center" ><form  action="" onsubmit="return validarFormulario()">
+													<label for="nombre">
+													<span>Nombre:</span>
+													</label>
+													<input id="nombre" name="nombre" type="text">
+													<br><br>
+													<label for="contraseña">
+													<span>contraseña:</span>
+													</label>
+													<input id="contraseña" name="contresaña" type="text">
+													<br><br>
+													<label for="correo">
+													<span>correo:</span>
+													</label>
+													<input id="correo" name="correo" type="text">
+													<br><br>
+													<label for="selector">
+													<span>Selecciona un genero:</span>
+													</label>
+													<br><br>
+													<select id="selector" name="selector">
+													<option value="">rap</option>
+													<option value="1">reggae</option>
+													<option value="2">hip-hop</option>
+													<option value="3">underground</option>
+													</select>
+													<br><br>
+													<label for="checkBox">
+													<span> no soy un robot:</span>
+													</label>
+													<input id="checkBox" name="checkBox" type="checkbox"> Haz clic aqui
+													<br><br>
+													<input type="submit" value="ENVIAR">
+													</form></font>
+					
+					
+				
+					
+					
+	  
+			</div>
+			
+	  </div>
+ 
+	  <div id="navegacion" autoplay = "true" >
+			<h2>track</h2>
+			<h3>track1 DJ SHAYMAN(Pachamama Crew) Reggae Dancehall Sobrevive VL 2</h3>
+			<embed  align = right width="135" height="150" src = "audio/DJ SHAYMAN(Pachamama Crew) Reggae Dancehall Sobrevive VL 2.mp3" autoplay= "true" loop  = "false" >
+			<h3>track2 ATA (LA ETNNIA) COAST TO COAST(VIDEO OFICIAL</h3>
+			<embed  align = right width="135" height="150" src = "audio/ATA (LA ETNNIA) COAST TO COAST(VIDEO OFICIAL).mp3" autoplay= "true" loop  = "false" >
+			<h3>track3 Akapellah - Smoking Feat Denyerkin (Track 09 Album</h3>
+			<embed  align = right width="135" height="150" src = "audio/Akapellah - Smoking Feat Denyerkin (Track 09 Album.mp3" autoplay= "true" loop  = "false" >
+			<h3> track4 Akapellah - Retórica (Track 01 Album Como Nunca)</h3>
+			<embed  align = right width="135" height="150" src = "audio/Akapellah - Retórica (Track 01 Album Como Nunca).mp3" autoplay= "true" loop  = "false" >
+			<h3> track5 Busy Signal - Jah love - Official Video</h3>
+			<embed  align = right width="135" height="150" src = "audio/Busy Signal - Jah love - Official Video.mp3" autoplay= "true" loop  = "false" >
+			
+
+	  </div>
+ 
+	  <div id="derecha">
+					<font size="4" face="georgian" color= "white"><h2>RAPORTES</h2></font>
+					<br>
+				
+				<p><font size="4" face="georgian" color= "white"><strong>hip hop al parque.</strong> <br><br><br> no te pierdas la presentacion de grupos locales e internacionales en el evento 2019 donde tendremos artistas como kino,canabrava y nach de espana</font> </p>
+				
+				<p><font size="4" face="georgian" color= "white"><strong>La leyenda del rap Wu Tang Clan se posiciona a favor del independentismo catalán.</strong> <br><br>El legendario grupo estadounidense WuTangClan ha sorprendido a sus seguidores con un mensaje en su perfil de Instagram, en el que evidencia un posicionamiento a favor 
+				del independentismo catalán. El post, que muestra una imagen de los recientes disturbios en Barcelona (en la que uno de los manifestantes porta una sudadera del grupo), ha sido comentado por varios usuarios que han ido añadiendo hashtags como #freedomforcatalonia, #spainsitandtalk, #policebrutality o #spainisfasciststate.</font> </p>
+				
+	  </div>
+				<div id = "piepagina"> <p>derechos reservados D.O.C 2019- contacto : d.ortiz1066@pascualbravo.edu.co</p></div>
+	</div>
+</body>
+</html>
